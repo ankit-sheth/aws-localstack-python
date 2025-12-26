@@ -2,7 +2,7 @@
 
 # Quick start script to set up the entire project
 
-echo "=== Image Management API - Quick Start ==="
+echo "=== for Image Management API - Quick Start ==="
 echo ""
 
 # Check if Docker is running
@@ -35,29 +35,6 @@ until curl -s http://localhost:4566/_localstack/health > /dev/null; do
     sleep 2
 done
 
-echo "✅ LocalStack is ready"
+echo "localstack is ready"
 
-# Deploy API
-echo ""
-echo "Deploying API..."
-cd ../api
-bash deploy.sh
 
-echo ""
-echo "=== Setup Complete! ==="
-echo ""
-echo "To test the API, use the endpoints shown above."
-echo ""
-echo "Quick test commands:"
-echo "  1. Upload an image:"
-echo "     BASE64_IMAGE=\$(base64 -w 0 your_image.jpg)"
-echo "     curl -X POST http://localhost:4566/restapis/\$API_ID/prod/_user_request_/images \\"
-echo "       -H 'Content-Type: application/json' \\"
-echo "       -d '{\"filename\": \"test.jpg\", \"image_data\": \"'\$BASE64_IMAGE'\"}'"
-echo ""
-echo "  2. List images:"
-echo "     curl http://localhost:4566/restapis/\$API_ID/prod/_user_request_/images"
-echo ""
-echo "To stop LocalStack:"
-echo "  cd localstack && docker-compose down"
-echo ""
