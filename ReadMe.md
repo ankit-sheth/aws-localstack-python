@@ -1,5 +1,5 @@
 
-1. to create the local stack and setup execute: (only create local stack)
+1. to create the local stack and setup execute: (only create local stack - s3,dynamodb,lambda,apigateway,iam,sts)
    ./setup.sh
 
 2. to setup the apis

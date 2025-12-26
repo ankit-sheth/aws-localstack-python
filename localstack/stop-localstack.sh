@@ -9,8 +9,8 @@ if command -v docker &> /dev/null && docker compose version &> /dev/null; then
 elif command -v docker-compose &> /dev/null; then
     docker-compose down
 else
-    echo "❌ Error: Neither 'docker compose' nor 'docker-compose' is available"
+    echo " Error: Neither 'docker compose' nor 'docker-compose' is available"
     exit 1
 fi
 
-echo "✅ LocalStack stopped"
+echo " LocalStack stopped"
